@@ -15,11 +15,11 @@ const { NotImplementedError } = require('../extensions/index.js');
  *
  */
 function countCats(matrix) {
-  let namber;
+  let namber =0;
   for(let i = 0; i < matrix.length; i++)
   {
       if(Array.isArray(matrix[i])){
-       namber += countCats(matrix[i]);
+        namber += countCats(matrix[i]);
       }
       else{
         if(matrix[i] === '^^') namber++;
