@@ -15,6 +15,7 @@ function getSeason( date ) {
   let season  = ['spring', 'summer', 'fall', 'winter'];
   let error = 'Unable to determine the time of year!';
   if(date.getFullYear() == 2023) return 'Unable to determine the time of year!'; 
+  if(date.getMonth() > 11) return 'Invalid date!'; 
   
   if(date.getMonth() >= 0  && date.getMonth() < 2 || date.getMonth() == 11) return season[3];
   else if (date.getMonth() >= 2  && date.getMonth() <= 4) return season[0];
