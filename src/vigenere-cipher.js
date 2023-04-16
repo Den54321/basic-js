@@ -27,7 +27,7 @@ class VigenereCipheringMachine {
   }
 
   encrypt(string, key) {
-    if(!string || !key) return new Error('Incorrect arguments!');
+    if(!string || !key) return 'Incorrect arguments!';
     let res = '';
     let curentSymbol;
     let curentSymbolKey;
@@ -51,8 +51,8 @@ class VigenereCipheringMachine {
     }
     return res;
   }
-  decrypt() {
-    if(!string || !key) return new Error('Incorrect arguments!');
+  decrypt(string, key) {
+    if(!string || !key) return 'Incorrect arguments!';
     let res = '';
     let curentSymbol;
     let curentSymbolKey;
